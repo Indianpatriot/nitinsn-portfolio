@@ -1,0 +1,4 @@
+# Portfolio roadmap
+- [ ] Build the recruiter-friendly portfolio home with accurate profile, projects, experience, skills, resume, and contact.
+- [ ] Add three substantial project case studies and working navigation.
+- [ ] Verify links, resume, theme, responsive navigation, and desktop/mobile rendering.
