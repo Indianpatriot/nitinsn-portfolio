@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
-import { ArrowDown, ArrowDownToLine, ArrowRight, ArrowUpRight, ExternalLink, Github, Linkedin, Mail, MoveUpRight } from 'lucide-react';
+import { ArrowDown, ArrowDownToLine, ArrowUpRight, ExternalLink, Github, Linkedin, MoveUpRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ProjectVisual } from '@/components/portfolio/ProjectVisual';
 import { SiteFooter, SiteHeader, resumeUrl } from '@/components/portfolio/SiteChrome';

@@ -1,4 +1,4 @@
-import { Activity, ArrowUpRight, CalendarDays, Code2, MapPin, ShieldCheck, Ticket, TrendingUp } from 'lucide-react';
+import { Activity, ArrowUpRight, Code2, MapPin, Ticket, TrendingUp } from 'lucide-react';
 import type { Project } from '@/lib/portfolio';
 
 export function ProjectVisual({ visual, compact = false }: { visual: Project['visual']; compact?: boolean }) {
