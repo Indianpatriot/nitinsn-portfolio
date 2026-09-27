@@ -1,24 +1,42 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from '@tanstack/react-router';
+import { ArrowDown, ArrowDownToLine, ArrowUpRight, ExternalLink, Github, Linkedin, MoveUpRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { ProjectVisual } from '@/components/portfolio/ProjectVisual';
+import { SiteFooter, SiteHeader, resumeUrl } from '@/components/portfolio/SiteChrome';
+import { links, otherProjects, projects, skills } from '@/lib/portfolio';
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
-export const Route = createFileRoute("/")({
-  component: Index,
+export const Route = createFileRoute('/')({
+  head: () => ({ meta: [
+    { title: 'Nitin S N | Software Engineer Portfolio' },
+    { name: 'description', content: 'Portfolio of Nitin S N, an MCA student at RVCE focused on software engineering, full-stack development, backend systems and applied AI/ML.' },
+    { property: 'og:title', content: 'Nitin S N | Software Engineer Portfolio' },
+    { property: 'og:description', content: 'Explore full-stack, backend, and applied AI/ML projects by Nitin S N, MCA student at RVCE.' },
+    { property: 'og:type', content: 'website' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+  ] }),
+  component: HomePage,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
+function SectionHeading({ index, eyebrow, title, aside }: { index: string; eyebrow: string; title: string; aside?: string }) {
+  return <div className="section-heading"><div><span className="eyebrow"><span className="eyebrow-index">{index}</span> / {eyebrow}</span><h2>{title}</h2></div>{aside && <p>{aside}</p>}</div>;
+}
+
+function HomePage() {
+  return <div className="portfolio-site"><SiteHeader/><main>
+    <section className="hero container-wide" id="home"><div className="hero-content"><div className="availability"><span className="status-dot"/> OPEN TO INTERNSHIP OPPORTUNITIES</div><div className="hero-overline"><span>HELLO, I’M NITIN S N</span><span className="hero-overline-line"/></div><h1>Software Engineer<br/>building <em>practical,</em><br/>scalable software<span className="hero-period">.</span></h1><p className="hero-description">MCA student at RVCE with hands-on experience building full-stack applications, backend systems, APIs, and AI/ML-powered projects.</p><div className="hero-actions"><Button asChild className="button-primary"><a href="#projects">View Projects <ArrowUpRight size={17}/></a></Button><Button asChild variant="outline" className="button-outline"><a href={resumeUrl} download="NitinSN_Resume.pdf">Download Resume <ArrowDownToLine size={16}/></a></Button></div><div className="hero-social"><span>FIND ME ON</span><a href={links.github} target="_blank" rel="noopener noreferrer">GitHub <ArrowUpRight size={13}/></a><a href={links.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn <ArrowUpRight size={13}/></a><a href={links.email}>Email <ArrowUpRight size={13}/></a></div></div><div className="hero-aside" aria-hidden="true"><div className="terminal-top"><span className="terminal-controls"><i/><i/><i/></span><span>nitin@workspace ~</span><span>⌘</span></div><div className="terminal-body"><div><span className="terminal-prompt">$</span> whoami</div><p>Nitin S N <span className="terminal-muted">// software engineer</span></p><div><span className="terminal-prompt">$</span> cat focus.txt</div><p><span className="terminal-green">→</span> building products<br/><span className="terminal-green">→</span> solving problems<br/><span className="terminal-green">→</span> learning systems<br/><span className="terminal-green">→</span> shipping software<span className="terminal-cursor">▋</span></p></div><div className="terminal-footer"><span><span className="terminal-green">●</span> ALL SYSTEMS OPERATIONAL</span><span>01 / 04</span></div></div><a className="hero-scroll" href="#about">SCROLL TO EXPLORE <ArrowDown size={14}/></a></section>
+
+    <section className="about-section section-border" id="about"><div className="container-wide"><SectionHeading index="01" eyebrow="THE PERSON BEHIND THE CODE" title="About me"/><div className="about-grid"><div className="about-copy"><p className="about-lead">I’m an MCA student at <strong>RV College of Engineering</strong> focused on software engineering, full-stack development, backend systems, and applied AI/ML.</p><p>I enjoy building practical software products and understanding the engineering decisions behind them — from how an API is structured to how data is modeled and how an application behaves under real-world constraints.</p><div className="education"><div><span>2025 — 2027</span><p>MCA · RV College of Engineering, Bengaluru</p></div><div><span>2022 — 2025</span><p>BCA · SSMRV College, Bengaluru</p></div></div></div><div className="focus-area"><div className="focus-title">WHAT I FOCUS ON <span>↗</span></div>{['Software Engineering', 'Full-Stack Development', 'Backend & APIs', 'Databases', 'AI / ML', 'Problem Solving'].map((item, i) => <div className="focus-row" key={item}><span>0{i+1}</span><strong>{item}</strong><ArrowUpRight size={15}/></div>)}</div></div></div></section>
+
+    <section className="projects-section section-border" id="projects"><div className="container-wide"><SectionHeading index="02" eyebrow="SELECTED WORK" title="Featured projects" aside="A closer look at what I’ve built — and the engineering behind it."/><div className="featured-projects">{projects.map(project => <article className="feature-project" key={project.slug}><div className="project-visual-wrap"><ProjectVisual visual={project.visual}/></div><div className="project-details"><div className="project-meta"><span>{project.number} / 03</span><span>{project.category}</span></div><h3>{project.name}<span className="project-title-dot">.</span></h3><p className="project-subtitle">{project.subtitle}</p><p className="project-description">{project.description}</p><div className="project-feature-list"><span className="label-small">HIGHLIGHTS</span>{project.features.slice(0,4).map(feature => <span key={feature}><i/> {feature}</span>)}</div><div className="tech-list">{project.stack.map(item => <span key={item}>{item}</span>)}</div><div className="project-actions"><Button asChild className="button-primary"><Link to="/projects/$slug" params={{slug: project.slug}}>View Case Study <ArrowUpRight size={15}/></Link></Button>{project.github && <a className="text-action" href={project.github} target="_blank" rel="noopener noreferrer"><Github size={16}/> GitHub</a>}{project.demo && <a className="text-action" href={project.demo} target="_blank" rel="noopener noreferrer"><ExternalLink size={16}/> Live Demo</a>}</div></div></article>)}</div></div></section>
+
+    <section className="other-section section-border"><div className="container-wide"><SectionHeading index="03" eyebrow="MORE THINGS I’VE BUILT" title="Other projects"/><div className="other-grid">{otherProjects.map((project, i) => <article className="other-project" key={project.name}><div className="other-top"><span>0{i+4} / PROJECT</span>{project.github ? <a href={project.github} target="_blank" rel="noopener noreferrer" aria-label={`${project.name} on GitHub`}><ArrowUpRight size={20}/></a> : <span className="no-link-icon">↗</span>}</div><div><span className="other-type">{project.type}</span><h3>{project.name}</h3><p>{project.description}</p></div><div className="tech-list">{project.stack.map(item => <span key={item}>{item}</span>)}</div></article>)}</div></div></section>
+
+    <section className="experience-section section-border" id="experience"><div className="container-wide"><SectionHeading index="04" eyebrow="WHERE I’VE WORKED" title="Experience"/><div className="experience-row"><div className="experience-date"><span className="timeline-dot"/> MAR — APR 2025</div><div className="experience-content"><div className="experience-top"><div><h3>Software Development Intern</h3><p>Rubixe AI</p></div><span>INTERNSHIP</span></div><p>Built a Python desktop recipe finder integrating the Spoonacular API. Implemented ingredient-based search and dietary filtering, used Pandas for nutrition data and Matplotlib for visualizations, and added multithreading and logging for a more responsive application.</p><div className="tech-list"><span>Python</span><span>Pandas</span><span>Matplotlib</span><span>Spoonacular API</span></div></div></div></div></section>
+
+    <section className="skills-section section-border" id="skills"><div className="container-wide"><SectionHeading index="05" eyebrow="MY TOOLKIT" title="Technical skills" aside="Tools I’ve worked with, organized by what I use them for."/><div className="skills-grid">{skills.map(group => <div className="skill-group" key={group.title}><h3>{group.title}</h3><div>{group.items.map(skill => <span key={skill}>{skill}</span>)}</div></div>)}</div><div className="exploring"><span className="eyebrow">BEYOND THE TOOLKIT</span><div><h3>Currently exploring <MoveUpRight size={21}/></h3><p>Backend engineering · System design fundamentals · Cloud engineering · Docker & CI/CD · Distributed systems fundamentals · AI/ML applications · Data engineering</p></div></div></div></section>
+
+    <section className="resume-section section-border" id="resume"><div className="container-wide resume-inner"><div><span className="eyebrow"><span className="eyebrow-index">06</span> / THE FULL PICTURE</span><h2>Want the <em>detailed</em> version?</h2><p>Education, experience, projects, and technical background — all in one place.</p></div><div className="resume-actions"><Button asChild className="button-primary"><a href={resumeUrl} download="NitinSN_Resume.pdf">Download Resume <ArrowDownToLine size={17}/></a></Button><a className="text-action" href={resumeUrl} target="_blank" rel="noopener noreferrer">View Resume <ArrowUpRight size={16}/></a></div></div></section>
+
+    <section className="contact-section section-border" id="contact"><div className="container-wide contact-inner"><span className="eyebrow"><span className="eyebrow-index">07</span> / GET IN TOUCH</span><h2>Let’s build<br/><em>something.</em></h2><p>I’m currently open to software engineering and development internship opportunities.</p><div className="contact-actions"><Button asChild className="button-primary"><a href={links.email}>Email Me <ArrowUpRight size={17}/></a></Button><a href={links.linkedin} target="_blank" rel="noopener noreferrer"><Linkedin size={16}/> LinkedIn <ArrowUpRight size={14}/></a><a href={links.github} target="_blank" rel="noopener noreferrer"><Github size={16}/> GitHub <ArrowUpRight size={14}/></a></div><a className="contact-email" href={links.email}>snnitin14@gmail.com <ArrowUpRight size={18}/></a></div></section>
+  </main><SiteFooter/></div>;
 }
