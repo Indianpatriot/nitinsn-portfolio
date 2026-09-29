@@ -6,7 +6,7 @@ import { links } from '@/lib/portfolio';
 import resumeAsset from '@/assets/resume.pdf.asset.json';
 
 export const resumeUrl = resumeAsset.url;
-const nav = [ ['Home', 'home'], ['About', 'about'], ['Projects', 'projects'], ['Experience', 'experience'], ['Skills', 'skills'], ['Contact', 'contact'] ] as const;
+const nav = [ ['Home', 'home'], ['About', 'about'], ['Projects', 'projects'], ['Highlights', 'highlights'], ['Experience', 'experience'], ['Skills', 'skills'], ['Contact', 'contact'] ] as const;
 
 export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
