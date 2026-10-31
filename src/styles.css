@@ -420,3 +420,20 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--highlight); out
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
 
 @media (max-width: 640px) { .hero-aside { display: none; } .hero { padding-bottom: 90px; } .hero-scroll { bottom: 20px; } }
+
+/* Focused refinements: keep the existing identity while emphasizing the lead project. */
+.hero h1 { max-width: 760px; }
+.lead-project { min-height: 500px; border-color: var(--highlight); }
+.lead-project .project-visual-wrap { padding: 24px; }
+.lead-project .project-details h3 { color: var(--highlight); }
+.highlights-section { padding: 82px 0 92px; }
+.highlights-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 32px; }
+.highlight-item { display: grid; grid-template-columns: 30px 1fr; gap: 13px; border-top: 1px solid var(--border); padding: 20px 0 22px; }
+.highlight-item > span { color: var(--highlight); font: 10px var(--font-mono); padding-top: 3px; }
+.highlight-item h3 { font: 700 15px var(--font-display); margin: 0 0 8px; }
+.highlight-item p { color: var(--muted-foreground); font-size: 12px; line-height: 1.7; margin: 0; }
+.skills-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.skill-group { min-width: 0; }
+.skill-group h3 { color: var(--highlight); }
+@media (max-width: 900px) { .highlights-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .lead-project { min-height: auto; }.lead-project .project-visual-wrap { padding: 10px; }.highlights-section { padding: 66px 0 72px; }.highlights-grid { grid-template-columns: 1fr; }.skills-grid { grid-template-columns: 1fr; } }
