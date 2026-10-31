@@ -81,7 +81,7 @@ export const otherProjects = [
 
 export const skills = [
   { title: 'Primary / Hands-on', items: ['Python', 'JavaScript', 'React', 'Node.js', 'Express.js', 'PostgreSQL', 'SQL', 'Git'] },
-  { title: 'Working Knowledge', items: ['Java', 'TypeScript', 'FastAPI', 'Supabase', 'AWS', 'Docker', 'CI/CD', 'scikit-learn'] },
+  { title: 'Working Knowledge', items: ['Java', 'TypeScript', 'FastAPI', 'Supabase', 'AWS', 'Docker', 'CI/CD', 'scikit-learn', 'C++', 'Tailwind CSS', 'HTML', 'CSS', 'NumPy', 'Matplotlib', 'GitHub', 'VS Code', 'Linux', 'Postman'] },
   { title: 'Familiarity / Exploring', items: ['RAG', 'Vector Databases', 'LLM APIs', 'Distributed Systems', 'Cloud Engineering', 'Data Engineering'] },
 ];
 
