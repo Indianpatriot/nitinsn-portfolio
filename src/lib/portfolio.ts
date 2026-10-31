@@ -81,8 +81,8 @@ export const otherProjects = [
 
 export const skills = [
   { title: 'Primary / Hands-on', items: ['Python', 'JavaScript', 'React', 'Node.js', 'Express.js', 'PostgreSQL', 'SQL', 'Git'] },
-  { title: 'Working Knowledge', items: ['Java', 'TypeScript', 'FastAPI', 'Supabase', 'AWS', 'Docker', 'CI/CD', 'scikit-learn', 'C++', 'Tailwind CSS', 'HTML', 'CSS', 'NumPy', 'Matplotlib', 'GitHub', 'VS Code', 'Linux', 'Postman'] },
-  { title: 'Familiarity / Exploring', items: ['RAG', 'Vector Databases', 'LLM APIs', 'Distributed Systems', 'Cloud Engineering', 'Data Engineering'] },
+  { title: 'Working Knowledge', items: ['Java', 'TypeScript', 'FastAPI', 'Supabase', 'scikit-learn', 'Machine Learning', 'AST-based analysis', 'C++', 'Tailwind CSS', 'HTML', 'CSS', 'NumPy', 'Matplotlib', 'Pandas', 'GitHub', 'VS Code', 'Linux', 'Postman'] },
+  { title: 'Familiarity / Exploring', items: ['AWS', 'Docker', 'CI/CD', 'RAG', 'Vector Databases', 'LLM APIs', 'LLM/API applications', 'Distributed Systems', 'Cloud Engineering', 'Data Engineering'] },
 ];
 
 export const engineeringHighlights = [
