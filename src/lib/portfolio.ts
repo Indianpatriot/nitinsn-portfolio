@@ -1,3 +1,5 @@
+import { voyagerScreenGroups, type ScreenGroup } from '@/lib/screenshots';
+
 export const links = {
   github: 'https://github.com/Indianpatriot/',
   linkedin: 'https://www.linkedin.com/in/nitin-s-n/',
@@ -21,6 +23,7 @@ export type Project = {
   demo?: string;
   visual: 'voyager' | 'playarena' | 'algolens';
   sections: CaseSection[];
+  screenGroups?: ScreenGroup[];
 };
 
 export const projects: Project[] = [
@@ -49,7 +52,7 @@ export const projects: Project[] = [
     stack: ['React', 'Node.js', 'Express.js', 'PostgreSQL', 'JavaScript'],
     features: ['Role-based access', 'Passenger booking and seat allocation', 'Conductor workflows', 'Owner/admin functionality', 'Invoices and analytics'],
     results: ['Passenger, conductor, and owner workflows in one role-based platform', 'Seat allocation with invoice generation and analytics', 'Booking rules kept in the backend, not only in the interface'],
-    visual: 'voyager',
+    visual: 'voyager', github: 'https://github.com/Indianpatriot/bus-buddy', screenGroups: voyagerScreenGroups,
     sections: [
       { title: 'Problem', body: 'Passengers need a clear booking path, while conductors and owners need distinct operational workflows. Seat availability also becomes a correctness concern when multiple people attempt to book at once.' },
       { title: 'Solution', body: 'Voyager brings passenger booking, seat allocation, conductor workflows, and owner/admin operations into one full-stack platform. Invoice generation and analytics support operational tasks.' },

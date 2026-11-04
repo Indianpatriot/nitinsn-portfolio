@@ -408,7 +408,14 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--highlight); out
 .shot-lightbox-controls { display: flex; align-items: center; justify-content: center; gap: 16px; margin-top: 12px; font: 11px var(--font-mono); color: var(--muted-foreground); }
 .shot-lightbox-controls button { width: 40px; height: 40px; display: grid; place-items: center; border: 1px solid var(--border); border-radius: 999px; background: var(--background); color: var(--foreground); cursor: pointer; }
 .shot-lightbox-controls button:hover { border-color: var(--highlight); color: var(--highlight); }
-@media (max-width: 767px) { .shot-grid { grid-template-columns: minmax(0, 1fr); } .shot-item:last-child:nth-child(even) { grid-column: auto; } }
+.case-screens { padding: 56px 0 48px; border-bottom: 1px solid var(--border); }
+.screen-groups { display: grid; gap: 44px; margin-top: 36px; }
+.screen-group h3 { font: 700 20px var(--font-display); margin: 0 0 16px; }
+.screen-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: 18px; }
+.screen-item { margin: 0; min-width: 0; }
+.screen-item figcaption { margin-top: 10px; font-size: 12px; line-height: 1.6; color: var(--muted-foreground); }
+.screen-step { display: block; font: 10px var(--font-mono); color: var(--highlight); margin-bottom: 4px; }
+.case-source { margin-top: 48px; }
 .build-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; }
 .build-card { display: flex; align-items: center; justify-content: space-between; gap: 16px; border: 1px solid var(--border); padding: 24px 25px; transition: border-color .2s, transform .2s; }
 .build-card:hover { border-color: var(--highlight); transform: translateY(-2px); }
