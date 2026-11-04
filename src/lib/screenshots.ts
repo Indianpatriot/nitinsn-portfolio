@@ -1,11 +1,11 @@
 import algolensWorkspace from '@/assets/images/algolens-collage/image copy 2.png';
 import algolensComplexityReport from '@/assets/images/algolens-collage/image.png';
 import algolensAlgorithmIdentified from '@/assets/images/algolens-collage/image copy.png';
-import voyagerLanding from '@/assets/images/voyager/WhatsApp_Image_2026-11-04_at_10.10.40_AM_(1).jpeg';
-import voyagerLogin from '@/assets/images/voyager/WhatsApp_Image_2026-11-04_at_10.10.40_AM.jpeg';
-import voyagerAddBus from '@/assets/images/voyager/WhatsApp_Image_2026-11-04_at_10.10.41_AM_(1).jpeg';
-import voyagerPickupDrop from '@/assets/images/voyager/WhatsApp_Image_2026-11-04_at_10.10.41_AM_(2).jpeg';
-import voyagerMyBuses from '@/assets/images/voyager/WhatsApp_Image_2026-11-04_at_10.10.41_AM.jpeg';
+import voyagerLanding from '@/assets/images/voyager/voyager-landing.jpeg';
+import voyagerLogin from '@/assets/images/voyager/voyager-login.jpeg';
+import voyagerAddBus from '@/assets/images/voyager/voyager-add-bus.jpeg';
+import voyagerPickupDrop from '@/assets/images/voyager/voyager-pickup-drop.jpeg';
+import voyagerMyBuses from '@/assets/images/voyager/voyager-my-buses.jpeg';
 
 export type Shot = { src: string; alt: string; caption?: string };
 export type ScreenGroup = { title: string; numbered?: boolean; shots: Shot[] };
