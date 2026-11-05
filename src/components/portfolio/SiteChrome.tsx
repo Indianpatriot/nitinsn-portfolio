@@ -6,7 +6,7 @@ import { links } from '@/lib/portfolio';
 import resumeAsset from '@/assets/resume.pdf.asset.json';
 
 export const resumeUrl = resumeAsset.url;
-const nav = [ ['Home', 'home'], ['About', 'about'], ['Projects', 'projects'], ['Highlights', 'highlights'], ['Experience', 'experience'], ['Skills', 'skills'], ['Contact', 'contact'] ] as const;
+const nav = [ ['Home', 'home'], ['Education', 'education'], ['What I build', 'build'], ['Projects', 'projects'], ['Highlights', 'highlights'], ['Experience', 'experience'], ['Skills', 'skills'], ['Contact', 'contact'] ] as const;
 
 export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -36,5 +36,5 @@ export function SiteHeader() {
 }
 
 export function SiteFooter() {
-  return <footer className="site-footer"><div className="container-wide footer-inner"><div><Link to="/" className="site-logo">NITIN<span className="logo-dot">.</span><span className="logo-surname">S N</span></Link><p>Software Engineer / Full-Stack Developer</p></div><div className="footer-links"><a href={links.github} target="_blank" rel="noopener noreferrer">GitHub <ArrowUpRight size={13}/></a><a href={links.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn <ArrowUpRight size={13}/></a><a href={links.email}>Email <Mail size={13}/></a></div></div><div className="container-wide footer-bottom"><span>© 2026 Nitin S N</span><span>Built with React &amp; TanStack Start</span></div></footer>;
+  return <footer className="site-footer"><div className="container-wide footer-inner"><div><Link to="/" className="site-logo">NITIN<span className="logo-dot">.</span><span className="logo-surname">S N</span></Link><p>MCA Student · Full-Stack Developer</p></div><div className="footer-links"><a href={links.github} target="_blank" rel="noopener noreferrer">GitHub <ArrowUpRight size={13}/></a><a href={links.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn <ArrowUpRight size={13}/></a><a href={links.email}>Email <Mail size={13}/></a></div></div><div className="container-wide footer-bottom"><span>© 2026 Nitin S N</span><span>Built with React &amp; TanStack Start</span></div></footer>;
 }
