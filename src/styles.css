@@ -286,8 +286,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--highlight); out
 .feature-project { border: 1px solid var(--border); background: var(--background); display: grid; grid-template-columns: 1.08fr 1fr; min-height: 440px; }
 .project-visual-wrap { padding: 19px; min-width: 0; background: var(--surface-raised); display: flex; }
 .project-details { padding: clamp(28px, 3.1vw, 46px); display: flex; flex-direction: column; align-items: flex-start; min-width: 0; }
-.project-meta { width: 100%; display: flex; justify-content: space-between; gap: 12px; color: var(--highlight); font: 9px var(--font-mono); letter-spacing: .06em; }
-.project-meta span:first-child { color: var(--quiet); }
+.project-meta { width: 100%; display: flex; justify-content: flex-start; gap: 12px; color: var(--highlight); font: 9px var(--font-mono); letter-spacing: .06em; }
 .project-details h3 { font: 700 clamp(30px, 3vw, 43px)/1.1 var(--font-display); margin: 28px 0 3px; }
 .project-subtitle { font-size: 14px; color: var(--highlight); font-weight: 600; margin: 0 0 16px; }
 .project-problem { color: var(--foreground); font-size: 12px; line-height: 1.7; font-weight: 500; margin: 0 0 12px; max-width: 480px; }.project-description { color: var(--muted-foreground); font-size: 12px; line-height: 1.75; margin: 0 0 20px; max-width: 480px; }

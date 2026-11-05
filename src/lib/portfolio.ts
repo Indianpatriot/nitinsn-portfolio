@@ -10,7 +10,6 @@ export const links = {
 export type CaseSection = { title: string; body: string };
 export type Project = {
   slug: string;
-  number: string;
   name: string;
   subtitle: string;
   category: string;
@@ -28,7 +27,7 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: 'algolens', number: '01', name: 'AlgoLens', subtitle: 'AI-Assisted Static Code Analysis', category: 'APPLIED ML · DEVELOPER TOOLS',
+    slug: 'algolens', name: 'AlgoLens', subtitle: 'AI-Assisted Static Code Analysis', category: 'APPLIED ML · DEVELOPER TOOLS',
     problem: 'Problem: Recognizing an algorithm and estimating its complexity from source code is hard to do by inspection. Solution: A pipeline that extracts structural features from the code and classifies the algorithm with machine learning.',
     description: 'An AI-assisted static code analysis system that parses source code, extracts structural features, and uses machine learning to classify algorithm types and predict time and space complexity.',
     stack: ['Python', 'FastAPI', 'React', 'TypeScript', 'AST Parsing', 'Random Forest', 'Machine Learning'],
@@ -46,7 +45,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: 'voyager', number: '02', name: 'Voyager', subtitle: 'Bus Ticket Booking Platform', category: 'FULL-STACK · BOOKING SYSTEMS',
+    slug: 'voyager', name: 'Voyager', subtitle: 'Bus Ticket Booking Platform', category: 'FULL-STACK · BOOKING SYSTEMS',
     problem: 'Problem: Passengers, conductors, and owners need different workflows, and seat availability can conflict when several people book at once. Solution: A full-stack platform with role-based booking, seat allocation, and operational tools.',
     description: 'A full-stack bus ticket booking and management platform designed around real booking workflows, role-based access, seat allocation, and operational management.',
     stack: ['React', 'Node.js', 'Express.js', 'PostgreSQL', 'JavaScript'],
@@ -64,7 +63,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: 'playarena', number: '03', name: 'PlayArena', subtitle: 'Playground Booking Platform', category: 'FULL-STACK · PWA',
+    slug: 'playarena', name: 'PlayArena', subtitle: 'Playground Booking Platform', category: 'FULL-STACK · PWA',
     problem: 'Problem: Playground slot availability goes stale when other users book at the same time. Solution: A responsive Progressive Web App where availability is derived from stored booking records.',
     description: 'A Progressive Web App for discovering playgrounds and managing dynamic booking slots.',
     stack: ['React', 'Node.js', 'Supabase', 'PostgreSQL', 'JavaScript', 'PWA'],
@@ -85,7 +84,7 @@ export const projects: Project[] = [
 
 export const otherProjects = [
   { name: 'Spoonacular Recipe Finder', type: 'INTERNSHIP PROJECT', description: 'Python desktop application developed during my Rubixe AI internship, integrating the Spoonacular API for recipe search, dietary filtering and nutrition analysis, with Pandas, Matplotlib, multithreading and logging.', stack: ['Python', 'Spoonacular API', 'Pandas', 'Matplotlib'], github: 'https://github.com/Indianpatriot/spoonacular' },
-  { name: 'Mutual Fund Tracker', type: 'DESKTOP APPLICATION', description: 'A desktop app that lets you look up mutual fund information and view it clearly, using data from the mfapi.in API.', stack: ['Java', 'Swing', 'Maven', 'REST API'] },
+  { name: 'Mutual Fund Tracker', type: 'DESKTOP APPLICATION', description: 'A desktop app that lets you look up mutual fund information and view it clearly, using data from the mfapi.in API.', stack: ['Java', 'Swing', 'Maven', 'REST API'], github: 'https://github.com/Indianpatriot/java' },
 ];
 
 export const smallerProjects = [
