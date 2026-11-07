@@ -87,7 +87,10 @@ export const otherProjects = [
   { name: 'Mutual Fund Tracker', type: 'DESKTOP APPLICATION', description: 'A desktop app that lets you look up mutual fund information and view it clearly, using data from the mfapi.in API.', stack: ['Java', 'Swing', 'Maven', 'REST API'], github: 'https://github.com/Indianpatriot/java' },
 ];
 
+export const featuredProjects = projects.filter(project => project.slug !== 'voyager');
+
 export const smallerProjects = [
+  { name: 'Voyager: Bus ticket booking platform (React, Node.js, Express, PostgreSQL)', description: '', stack: [], github: 'https://github.com/Indianpatriot/bus-buddy' },
   { name: 'Neon Backup Optimizer', description: 'Algorithm visualization project.', stack: ['Algorithm visualization'], github: 'https://github.com/Indianpatriot/neon-backup-optimizer' },
   { name: 'Guardiant Identity Forge', description: 'Identity security hackathon project that detects identity sprawl and privileged-access abuse from structured identity data.', stack: ['Hackathon'], github: 'https://github.com/Indianpatriot/guardiant-identity-forge' },
 ];
@@ -103,8 +106,8 @@ export const certifications = [
 ];
 
 export const engineeringHighlights = [
-  { title: 'Concurrency', description: 'Identified the Voyager seat race condition, where two requests can see the same seat as free, and designed the availability check and reservation to be handled together. PlayArena availability is read from stored booking records.', slug: 'voyager', linkLabel: 'Voyager case study' },
-  { title: 'API Development', description: 'Designed REST APIs in Express and FastAPI, keeping access checks and booking rules in the backend rather than only in the interface.', slug: 'voyager', linkLabel: 'Voyager case study' },
+  { title: 'Concurrency', description: 'Designed PlayArena availability around stored booking records so booking decisions do not rely only on a stale browser view.', slug: 'playarena', linkLabel: 'PlayArena case study' },
+  { title: 'API Development', description: 'Designed REST APIs in Express and FastAPI, keeping access checks and booking rules in the backend rather than only in the interface.', slug: 'playarena', linkLabel: 'PlayArena case study' },
   { title: 'Database Engineering', description: 'Modeled routes, seats, bookings, and users in PostgreSQL for Voyager, and venues, time slots, and bookings for PlayArena.', slug: 'playarena', linkLabel: 'PlayArena case study' },
   { title: 'Static Analysis & ML', description: 'Extracted AST structural features and trained a Random Forest classifier to identify algorithm types in AlgoLens.', slug: 'algolens', linkLabel: 'AlgoLens case study' },
 ];
