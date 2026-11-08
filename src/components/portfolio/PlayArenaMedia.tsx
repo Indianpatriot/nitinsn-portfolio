@@ -3,7 +3,12 @@ import { Play } from "lucide-react";
 import { ScreenshotLightbox } from "@/components/portfolio/ScreenshotLightbox";
 import type { Shot } from "@/lib/screenshots";
 
-type PlayArenaShot = Shot & { width: number; height: number };
+type PlayArenaShot = Shot & {
+  width: number;
+  height: number;
+  captionTitle: string;
+  captionText: string;
+};
 
 const videoSource = "https://drive.google.com/file/d/1oWxflRjwcKd95nIYVulaF8kQG482ZOww/preview";
 const videoLink = "https://drive.google.com/file/d/1oWxflRjwcKd95nIYVulaF8kQG482ZOww/view";
@@ -11,29 +16,37 @@ const videoLink = "https://drive.google.com/file/d/1oWxflRjwcKd95nIYVulaF8kQG482
 const shots: PlayArenaShot[] = [
   {
     src: "/assets/playarena/image.png",
-    alt: "PlayArena owner and player login screens",
-    caption: "Discover venues",
+    alt: "Separate PlayArena sign-in screens for players and venue owners",
+    captionTitle: "Role-based login",
+    captionText:
+      "Separate sign-in for players and venue owners, with each role sent to its own dashboard.",
     width: 631,
     height: 346,
   },
   {
     src: "/assets/playarena/image copy.png",
-    alt: "PlayArena player dashboard showing games, sports, and nearby venues",
-    caption: "Pick a slot",
+    alt: "PlayArena player dashboard showing venue discovery, sports, dates, and available booking slots",
+    captionTitle: "Player dashboard",
+    captionText:
+      "Discover venues, pick a date and time slot, and see live slot availability before booking.",
     width: 696,
     height: 515,
   },
   {
     src: "/assets/playarena/image copy 2.png",
-    alt: "PlayArena owner dashboard with booking analytics and player feedback",
-    caption: "Booking confirmed",
+    alt: "PlayArena owner dashboard showing booking analytics, slot information, and player feedback ratings",
+    captionTitle: "Owner dashboard",
+    captionText:
+      "Venue owners manage slots and bookings, with analytics driven by player feedback and ratings.",
     width: 617,
     height: 457,
   },
   {
     src: "/assets/playarena/image copy 3.png",
-    alt: "PlayArena checkout and game ticket screens",
-    caption: "Slot unavailable to other users",
+    alt: "PlayArena checkout screen beside a confirmation ticket showing the booked game and payment details",
+    captionTitle: "Checkout and ticket",
+    captionText:
+      "Review the booked slot, complete a demo payment, and receive a confirmation ticket instantly.",
     width: 633,
     height: 377,
   },
@@ -89,7 +102,7 @@ export function PlayArenaMedia({ compact = false }: { compact?: boolean }) {
               type="button"
               className="playarena-gallery-button"
               onClick={() => setOpenIndex(index)}
-              aria-label={`Open ${shot.caption}`}
+              aria-label={`Open ${shot.captionTitle}`}
             >
               <img
                 src={shot.src}
@@ -100,7 +113,9 @@ export function PlayArenaMedia({ compact = false }: { compact?: boolean }) {
                 loading="lazy"
               />
             </button>
-            <figcaption>{shot.caption}</figcaption>
+            <figcaption>
+              <strong>{shot.captionTitle}</strong> {shot.captionText}
+            </figcaption>
           </figure>
         ))}
       </div>

@@ -96,7 +96,7 @@ export const smallerProjects = [
 ];
 
 export const skills = [
-  { title: 'Primary / Hands-on', items: ['Python', 'JavaScript', 'TypeScript', 'React', 'Node.js', 'Express.js', 'FastAPI', 'PostgreSQL', 'SQL', 'Git'] },
+  { title: 'Primary / Hands-on', items: ['Python', 'JavaScript', 'TypeScript', 'React', 'Node.js', 'Express.js', 'FastAPI', 'MySQL', 'PostgreSQL', 'SQL', 'Git'] },
   { title: 'Working Knowledge', items: ['Java', 'Supabase', 'scikit-learn', 'Machine Learning', 'AST-based analysis', 'C++', 'Tailwind CSS', 'HTML', 'CSS', 'NumPy', 'Matplotlib', 'Pandas', 'GitHub', 'VS Code', 'Linux', 'Postman'] },
   { title: 'Familiarity / Exploring', items: ['AWS', 'Docker', 'CI/CD', 'RAG', 'Vector Databases', 'LLM APIs'] },
 ];
