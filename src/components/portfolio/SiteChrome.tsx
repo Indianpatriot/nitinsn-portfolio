@@ -3,9 +3,7 @@ import { useEffect, useState } from 'react';
 import { ArrowDownToLine, ArrowUpRight, Github, Linkedin, Mail, Menu, Moon, Sun, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { links } from '@/lib/portfolio';
-import resumeAsset from '@/assets/resume.pdf.asset.json';
-
-export const resumeUrl = resumeAsset.url;
+export const resumeUrl = "/NitinSN_Resume.pdf?v=2";
 const nav = [ ['Home', 'home'], ['Education', 'education'], ['What I build', 'build'], ['Projects', 'projects'], ['Highlights', 'highlights'], ['Experience', 'experience'], ['Skills', 'skills'], ['Contact', 'contact'] ] as const;
 
 export function SiteHeader() {
