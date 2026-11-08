@@ -83,14 +83,13 @@ export const projects: Project[] = [
 ];
 
 export const otherProjects = [
-  { name: 'Spoonacular Recipe Finder', type: 'INTERNSHIP PROJECT', description: 'Python desktop application developed during my Rubixe AI internship, integrating the Spoonacular API for recipe search, dietary filtering and nutrition analysis, with Pandas, Matplotlib, multithreading and logging.', stack: ['Python', 'Spoonacular API', 'Pandas', 'Matplotlib'], github: 'https://github.com/Indianpatriot/spoonacular' },
+  { name: 'Voyager', type: 'FULL-STACK · BOOKING SYSTEMS', description: 'Full-stack bus ticket booking platform with role-based workflows for passengers, conductors and bus owners, seat allocation, invoices and analytics.', stack: ['React', 'Node.js', 'Express.js', 'PostgreSQL'], caseStudy: 'voyager', github: 'https://github.com/Indianpatriot/bus-buddy' },
   { name: 'Mutual Fund Tracker', type: 'DESKTOP APPLICATION', description: 'A desktop app that lets you look up mutual fund information and view it clearly, using data from the mfapi.in API.', stack: ['Java', 'Swing', 'Maven', 'REST API'], github: 'https://github.com/Indianpatriot/java' },
 ];
 
 export const featuredProjects = projects.filter(project => project.slug !== 'voyager');
 
 export const smallerProjects = [
-  { name: 'Voyager: Bus ticket booking platform (React, Node.js, Express, PostgreSQL)', description: '', stack: [], github: 'https://github.com/Indianpatriot/bus-buddy' },
   { name: 'Neon Backup Optimizer', description: 'Algorithm visualization project.', stack: ['Algorithm visualization'], github: 'https://github.com/Indianpatriot/neon-backup-optimizer' },
   { name: 'Guardiant Identity Forge', description: 'Identity security hackathon project that detects identity sprawl and privileged-access abuse from structured identity data.', stack: ['Hackathon'], github: 'https://github.com/Indianpatriot/guardiant-identity-forge' },
 ];
